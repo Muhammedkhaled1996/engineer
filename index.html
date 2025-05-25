@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CURDS</title>
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="head">
+        <h1>CRUDS</h1>
+        <p>PRODUCT MANAGMENT SYSTEM</p>
+      </div>
+      <div class="form">
+        <input type="text" placeholder="Title" id="Title" />
+        <div class="second">
+          <input
+            onkeyup="GetTotal()"
+            type="number"
+            placeholder="Price"
+            id="Price"
+          />
+          <input
+            onkeyup="GetTotal()"
+            type="number"
+            placeholder="Tax"
+            id="Tax"
+          />
+          <input
+            onkeyup="GetTotal()"
+            type="number"
+            placeholder="Ads"
+            id="Ads"
+          />
+          <input
+            onkeyup="GetTotal()"
+            type="number"
+            placeholder="Discount"
+            id="Discount"
+          />
+          <label id="Total">0</label>
+        </div>
+        <input type="number" placeholder="Count" id="Count" />
+        <input type="text" placeholder="Category" id="Category" />
+        <button id="Create">Create</button>
+        <input
+          type="text"
+          onkeyup="searchData(this.value)"
+          placeholder="Search"
+          id="Search"
+        />
+      </div>
+      <div class="search">
+        <button onclick="getSearchMood(this.id)" id="SearchTitle">
+          Search by Title
+        </button>
+        <button onclick="getSearchMood(this.id)" id="SearchCategory">
+          Search by Category
+        </button>
+      </div>
+      <div id="deleteAll"></div>
+      <div class="search_details">
+        <table>
+          <thead>
+            <th>ID</th>
+            <th>TITLE</th>
+            <th>PRICE</th>
+            <th>TAXES</th>
+            <th>ADS</th>
+            <th>DISCOUNT</th>
+            <th>TOTAL</th>
+            <th>CATEGORY</th>
+            <th>UPDATE</th>
+            <th>DELETE</th>
+          </thead>
+          <tbody id="tbody">
+            <!-- <tr>
+              <td>1</td>
+              <td>oppo</td>
+              <td>57</td>
+              <td>56</td>
+              <td>7</td>
+              <td>657</td>
+              <td>-537</td>
+              <td>phone</td>
+              <th><button id="UPDATE">UPDATE</button></th>
+              <th><button id="DELETE">DELETE</button></th>
+            </tr> -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="Script.js"></script>
+  </body>
+</html>
